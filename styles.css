@@ -1,0 +1,124 @@
+:root{
+  --bg:#F5F4F1;
+  --panel:#EFEDE8;
+  --ink:#191B1F;
+  --ink-soft:#5B5E63;
+  --rule:#D9D6CF;
+  --accent:#1C6E5C;
+  --accent-soft:#5E9784;
+  --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+  --sans:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+
+a:focus-visible, .skip-link:focus{outline:2px solid var(--accent); outline-offset:4px;}
+
+.skip-link{
+  position:absolute; left:-9999px; top:0;
+  background:var(--bg); color:var(--ink);
+  padding:12px 20px; z-index:10; text-decoration:none;
+}
+.skip-link:focus{left:0;}
+
+.wrap{max-width:920px; margin:0 auto; padding:0 32px;}
+
+/* NAV */
+nav{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:28px 0; border-bottom:1px solid var(--rule);
+}
+.nav-mark{
+  font-family:var(--serif); font-weight:500; font-size:1.05rem;
+  color:var(--ink); text-decoration:none;
+}
+.nav-links{display:flex; gap:28px; list-style:none;}
+.nav-links a{color:var(--ink-soft); text-decoration:none; font-size:0.92rem;}
+.nav-links a:hover{color:var(--ink);}
+
+/* HERO */
+.hero{
+  display:grid; grid-template-columns:1fr 1.6fr; gap:40px;
+  padding:72px 32px 64px; margin:0 -32px; border-bottom:1px solid var(--rule);
+  background:radial-gradient(ellipse 900px 500px at 15% 0%, rgba(28,110,92,0.10), transparent 65%);
+}
+.hero-role{
+  font-size:0.85rem; color:var(--accent); font-weight:500;
+  letter-spacing:0.01em;
+}
+.hero-loc{color:var(--ink-soft); font-size:0.88rem; margin-top:10px;}
+.hero h1{
+  font-family:var(--serif); font-weight:400; font-size:2.6rem;
+  line-height:1.15; letter-spacing:-0.01em; max-width:11ch;
+}
+.hero-lede{
+  font-size:1.05rem; color:var(--ink-soft); margin-top:20px; max-width:46ch;
+}
+.hero-cta{
+  display:inline-block; margin-top:26px; color:var(--ink);
+  border-bottom:1px solid var(--ink); padding-bottom:2px;
+  text-decoration:none; font-size:0.95rem;
+}
+.hero-cta:hover{color:var(--accent); border-color:var(--accent);}
+
+/* SECTION HEADS */
+section{padding:56px 0; border-bottom:1px solid var(--rule);}
+.section-head{
+  display:flex; justify-content:space-between; align-items:baseline;
+  margin-bottom:32px;
+}
+.section-head h2{
+  font-family:var(--serif); font-weight:400; font-size:1.5rem;
+}
+.section-head span{color:var(--ink-soft); font-size:0.88rem;}
+
+/* PROJECT LEDGER */
+.ledger{list-style:none;}
+.ledger li{
+  display:grid; grid-template-columns:64px 1fr 180px; align-items:start;
+  padding:20px 0; border-bottom:1px solid var(--rule);
+}
+.ledger li:first-child{border-top:1px solid var(--rule);}
+.ledger li:hover{background:linear-gradient(90deg, rgba(28,110,92,0.06), rgba(28,110,92,0));}
+.ledger li:hover .proj-index{color:var(--accent);}
+.proj-index{color:var(--ink-soft); font-size:0.85rem; padding-right:16px;}
+.proj-main{padding-right:24px;}
+.proj-name{font-weight:600; font-size:1.02rem;}
+.proj-desc{color:var(--ink-soft); font-size:0.92rem; margin-top:6px; max-width:52ch;}
+.proj-metric{
+  text-align:right; font-size:0.9rem; color:var(--accent-soft);
+  white-space:nowrap;
+}
+
+/* ABOUT */
+.about-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+.about-grid p{color:var(--ink-soft); font-size:0.98rem;}
+.stack-heading{
+  font-size:0.98rem; font-weight:400; color:var(--ink); margin-bottom:10px;
+}
+.stack-list{list-style:none; display:flex; flex-wrap:wrap; gap:8px 10px; margin-top:4px;}
+.stack-list li{font-size:0.85rem; color:var(--ink-soft);}
+.stack-list li:not(:last-child)::after{content:"·"; margin-left:10px; color:var(--rule);}
+
+footer{
+  padding:36px 32px; margin:0 -32px; display:flex; justify-content:space-between;
+  color:var(--ink-soft); font-size:0.85rem;
+  background:radial-gradient(ellipse 700px 300px at 85% 100%, rgba(28,110,92,0.07), transparent 70%);
+}
+footer a{color:var(--ink-soft);}
+
+@media (max-width:640px){
+  .hero{grid-template-columns:1fr;}
+  .about-grid{grid-template-columns:1fr;}
+  .hero h1{font-size:2rem; max-width:none;}
+  .ledger li{grid-template-columns:64px 1fr;}
+  .proj-metric{display:none;}
+}
