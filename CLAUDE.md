@@ -39,6 +39,7 @@ pattern to escape the container's own padding. The hero and footer both rely on 
 - Avoid descendant selectors like `.hero p` for styling — they silently capture new elements added
   to the section. Use an explicit class (see `.hero-lede`).
 
-## Known placeholders
+## Content accuracy
 
-`you@example.com` in the footer and the nav's `resume.pdf` link are not real yet.
+Project descriptions and the resume PDF describe real client work. Client names are deliberately
+generalised ("a Fortune 500 bank") rather than named — keep it that way when editing copy.

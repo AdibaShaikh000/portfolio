@@ -3,6 +3,8 @@
 Personal portfolio site — a single static page, hand-written HTML and CSS with no build step
 and no dependencies.
 
+Live at https://adibashaikh000.github.io/portfolio/
+
 ## Run locally
 
 ```
@@ -14,8 +16,6 @@ Then open http://localhost:8000.
 Opening `index.html` directly via `file://` also works, since nothing is fetched relative to a
 server origin.
 
-## Before publishing
+## Deploying
 
-- Replace the placeholder email `you@example.com` in the footer of `index.html`
-- Add `resume.pdf` at the repo root, or repoint the Resume link in the nav
-- Fill in the `og:url` / add an `og:image` if you want link previews
+GitHub Pages serves `main` at the repo root. Pushing to `main` rebuilds the site automatically.
