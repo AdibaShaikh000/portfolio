@@ -3,7 +3,7 @@
 Personal portfolio site — a single static page, hand-written HTML and CSS with no build step
 and no dependencies.
 
-Live at https://adibashaikh000.github.io/portfolio/
+Live at https://adibashaikh.is-a.dev
 
 ## Run locally
 
@@ -18,4 +18,9 @@ server origin.
 
 ## Deploying
 
-GitHub Pages serves `main` at the repo root. Pushing to `main` rebuilds the site automatically.
+GitHub Pages serves `main` at the repo root, on the custom domain `adibashaikh.is-a.dev`
+(configured via the `CNAME` file — do not delete it). Pushing to `main` rebuilds the site
+automatically.
+
+The subdomain is registered through [is-a.dev](https://github.com/is-a-dev/register); the record
+lives in `domains/adibashaikh.json` in that repo and CNAMEs to `adibashaikh000.github.io`.
